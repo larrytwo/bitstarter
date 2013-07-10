@@ -8,6 +8,8 @@ app.get('/', function(request, response) {
 
   var buf = fs.readFileSync("./index.html");
 
+  response.setHeader("Content-Type", "text/html");
+
   response.send(buf.toString());
 
 });
